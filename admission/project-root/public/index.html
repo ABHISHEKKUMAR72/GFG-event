@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>College Admission Form</h2>
+        <form id="admissionForm" action="/submit-form" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tenthMarks">10th Marks (%):</label>
+            <input type="number" id="tenthMarks" name="tenthMarks" step="0.01" min="0" max="100" required>
+
+            <label for="twelfthMarks">12th Marks (%):</label>
+            <input type="number" id="twelfthMarks" name="twelfthMarks" step="0.01" min="0" max="100" required>
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="aadhaar">Aadhaar Card Number:</label>
+            <input type="text" id="aadhaar" name="aadhaar" pattern="[0-9]{12}" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" class="hidden">Form submitted successfully!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
